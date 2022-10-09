@@ -70,6 +70,7 @@ void autonomous(void) {
 void usercontrol(void) {
   // User control code here, inside the loop
   while (1) {
+    chassisControlArcade();
     // This is the main execution loop for the user control program.
     // Each time through the loop your program should update motor + servo
     // values based on feedback from the joysticks.
@@ -80,7 +81,7 @@ void usercontrol(void) {
     // ........................................................................
 
     wait(20, msec); // Sleep the task for a short amount of time to
-                    // prevent wasted resources.
+                    // prevent wasted resources. can reduce to 20 if ping (input lagggg) is too high lol.
   }
 }
 
